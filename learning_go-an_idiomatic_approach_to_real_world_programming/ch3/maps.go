@@ -14,4 +14,19 @@ func main() {
 
 	ages := make(map[int][]string, 10) // length 0, and grows past the initially specified size
 	fmt.Println(ages)
+
+	m := map[string]int{
+		"hello": 5,
+		"world": 0,
+	}
+	v, ok := m["hello"]
+	fmt.Println(v, ok)
+
+	v, ok = m["world"]
+	fmt.Println(v, ok)
+
+	v, ok = m["goodbye"]
+	fmt.Println(v, ok)
+
+	delete(m, "hello")
 }
