@@ -7,6 +7,7 @@ import (
 )
 
 func fileChecker3(name string) error {
+  var i int
 	f, err := os.Open(name)
 	if err != nil {
 		return fmt.Errorf("in fileChecker: %w", err)
