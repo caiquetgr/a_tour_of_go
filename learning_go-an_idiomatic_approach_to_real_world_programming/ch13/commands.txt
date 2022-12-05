@@ -1,0 +1,32 @@
+# Run test with coverage
+go test -v -cover -coverprofile=c.out
+
+# open webpage with coverage
+go tool cover -html=c.out
+
+
+# bench
+# -bench=. to bench all files in directory
+# -benchmem includes memory allocation information
+go test -bench=. 
+
+# Bench example:
+
+BenchmarkFileLen1-12  25  47201025 ns/op  65342 B/op  65208 allocs/op
+
+#Columns explanation: 
+
+BenchmarkFileLen1-12
+The name of the benchmark, a hyphen, and the value of GOMAXPROCS for the benchmark.
+
+25
+The number of times that the test ran to produce a stable result.
+
+47201025 ns/op
+How long it took to run a single pass of this benchmark, in nanoseconds (there are 1,000,000,000 nanoseconds in a second).
+
+65342 B/op
+The number of bytes allocated during a single pass of the benchmark.
+
+65208 allocs/op
+The number of times bytes had to be allocated from the heap during a single pass of the benchmark. This will always be less than or equal to the number of bytes allocated.

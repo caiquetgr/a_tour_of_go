@@ -1,0 +1,2 @@
+Go reservers the directory name "testdata" for holding your test data files!
+Example: https://github.com/learning-go-book/test_examples/tree/master/text
