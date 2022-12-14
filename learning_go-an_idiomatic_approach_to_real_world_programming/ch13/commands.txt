@@ -30,3 +30,16 @@ The number of bytes allocated during a single pass of the benchmark.
 
 65208 allocs/op
 The number of times bytes had to be allocated from the heap during a single pass of the benchmark. This will always be less than or equal to the number of bytes allocated.
+
+
+
+# Examples of unit test, integration tests, stubs, http mocks:
+https://github.com/learning-go-book/test_examples
+
+# Run all tests by tag "integration"
+go test -tags integration -v ./...
+
+# Find race conditions in test
+# Can also use the -race flag in build, trying to find race conditions while building the program, but this makes the build up to 10x slower
+go test -race
+
